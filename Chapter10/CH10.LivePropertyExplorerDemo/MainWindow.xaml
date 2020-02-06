@@ -1,0 +1,23 @@
+﻿<Window x:Class="CH10.LivePropertyExplorerDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Live Property Explorer Demo" Height="150" Width="400">
+    <Grid>
+        <Button x:Name="myButton"
+                Content="Click here"
+                Height="30"
+                Width="200"
+                FontSize="18"
+                FontWeight="Bold"
+                Foreground="Red">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFFF5454" Offset="0"/>
+                    <GradientStop Color="#FFFFF754" Offset="0.3"/>
+                    <GradientStop Color="#FFFFF754" Offset="0.8"/>
+                    <GradientStop Color="#FFFF5454" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
