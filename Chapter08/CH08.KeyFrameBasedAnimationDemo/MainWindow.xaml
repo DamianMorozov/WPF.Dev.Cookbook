@@ -1,0 +1,64 @@
+﻿<Window x:Class="CH08.KeyFrameBasedAnimationDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Key Frame based animation demo" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0">
+            <Ellipse x:Name="circle"
+                     Height="30"
+                     Width="30"
+                     Canvas.Left="50"
+                     Canvas.Top="100"
+                     Fill="OrangeRed"/>
+        </Canvas>
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="10">
+            <Button Content="Animate"
+                    Width="100">
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard>
+                                <Storyboard x:Name="Animate"
+                                            AutoReverse="True">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="circle" 
+                                                                   Storyboard.TargetProperty="(Canvas.Left)" 
+                                                                   AutoReverse="True"         
+                                                                   RepeatBehavior="Forever">
+                                        <LinearDoubleKeyFrame Value="50" 
+                                                              KeyTime="0:0:0" />
+                                        <LinearDoubleKeyFrame Value="450"
+                                                              KeyTime="0:0:1" />
+                                        <LinearDoubleKeyFrame Value="450"
+                                                              KeyTime="0:0:3" />
+                                        <LinearDoubleKeyFrame Value="250"
+                                                              KeyTime="0:0:5" />
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="circle" 
+                                                                   Storyboard.TargetProperty="(Canvas.Top)" 
+                                                                   AutoReverse="True"         
+                                                                   RepeatBehavior="Forever">
+                                        <LinearDoubleKeyFrame Value="100" 
+                                                              KeyTime="0:0:0" />
+                                        <LinearDoubleKeyFrame Value="200"
+                                                              KeyTime="0:0:1" />
+                                        <LinearDoubleKeyFrame Value="50"
+                                                              KeyTime="0:0:3" />
+                                        <LinearDoubleKeyFrame Value="150"
+                                                              KeyTime="0:0:5" />
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

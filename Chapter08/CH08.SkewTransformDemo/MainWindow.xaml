@@ -1,0 +1,42 @@
+﻿<Window x:Class="CH08.SkewTransformDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Skew Transform Demo" Height="300" Width="940">
+    <StackPanel Orientation="Horizontal">
+        <Grid>
+            <Image Height="300" Width="260"
+                   Margin="4" Opacity="0.2"
+                   Source="Images/image1.png"/>
+            <Image Height="300" Width="260"
+                   Margin="4"
+                   Source="Images/image1.png">
+                <Image.RenderTransform>
+                    <SkewTransform AngleX="50"
+                                   AngleY="5"/>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+        <Grid Margin="200 0 0 0">
+            <Image Height="300" Width="260"
+                   Margin="4" Opacity="0.2"
+                   Source="Images/image1.png">
+                <Image.RenderTransform>
+                    <SkewTransform AngleX="30"
+                                   AngleY="5"
+                                   CenterX="0"
+                                   CenterY="0"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image Height="300" Width="260"
+                   Margin="4" Opacity="1.0"
+                   Source="Images/image1.png">
+                <Image.RenderTransform>
+                    <SkewTransform AngleX="30"
+                                   AngleY="5"
+                                   CenterX="200"
+                                   CenterY="-100"/>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+    </StackPanel>
+</Window>

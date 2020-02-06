@@ -1,0 +1,53 @@
+﻿<Window x:Class="CH08.PropertyBasedAnimationDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Property based animation demo" Height="250" Width="425">
+    <Grid>
+        <Rectangle x:Name="squareBox"
+                   Height="100"
+                   Width="100">
+            <Rectangle.Fill>
+                <SolidColorBrush x:Name="squareBoxFillBrush" 
+                                 Color="Black"/>
+            </Rectangle.Fill>
+            <Rectangle.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="squareBox"
+                                                 Storyboard.TargetProperty="Height"
+                                                 To="200"/>
+                                <DoubleAnimation Storyboard.TargetName="squareBox"
+                                                 Storyboard.TargetProperty="Width"
+                                                 To="400"/>
+                                <ColorAnimation Storyboard.TargetName="squareBoxFillBrush"
+                                                Storyboard.TargetProperty="Color"
+                                                To="OrangeRed"
+                                                Duration="0:0:1"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="squareBox"
+                                                 Storyboard.TargetProperty="Height"
+                                                 To="100"/>
+                                <DoubleAnimation Storyboard.TargetName="squareBox"
+                                                 Storyboard.TargetProperty="Width"
+                                                 To="100"/>
+                                <ColorAnimation Storyboard.TargetName="squareBoxFillBrush"
+                                                Storyboard.TargetProperty="Color"
+                                                To="Black"
+                                                Duration="0:0:1"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Rectangle.Triggers>
+        </Rectangle>
+    </Grid>
+</Window>

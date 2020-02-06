@@ -1,0 +1,38 @@
+﻿<Window x:Class="CH08.RotateTransformDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rotate Transform Demo" Height="450" Width="880">
+    <StackPanel Orientation="Horizontal"
+                VerticalAlignment="Top">
+        <Image Height="300" Width="260"
+               Margin="4" Opacity="0.2"
+               Source="Images/image1.png"/>
+        <Image Height="300" Width="260"
+               Margin="4"
+               Source="Images/image1.png">
+            <Image.RenderTransform>
+                <RotateTransform Angle="45"/>
+            </Image.RenderTransform>
+        </Image>
+        <Grid Margin="80 0 0 0">
+            <Image Height="300" Width="260"
+                   Margin="4" Opacity="0.2"
+                   Source="Images/image1.png">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="45"
+                                     CenterX="0"
+                                     CenterY="0"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image Height="300" Width="260"
+                   Margin="4" 
+                   Source="Images/image1.png">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="45"
+                                     CenterX="30"
+                                     CenterY="50"/>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+    </StackPanel>
+</Window>
