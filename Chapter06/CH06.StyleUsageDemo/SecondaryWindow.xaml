@@ -1,0 +1,12 @@
+﻿<Window x:Class="CH06.StyleUsageDemo.SecondaryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Second Window" Height="220" Width="320">
+    <StackPanel Orientation="Vertical"
+                Margin="10">
+        <Button Content="Red Button Style"/>
+        <Button Content="Red Button Style"/>
+        <Button Content="Red Button Style"/>
+        <Button Content="Red Button Style"/>
+    </StackPanel>
+</Window>

@@ -1,0 +1,53 @@
+﻿<Window x:Class="CH06.StyleInheritanceDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Style Inheritance Demo" Height="220" Width="320">
+    <Window.Resources>
+        <Style x:Key="ButtonBaseStyle" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="MinWidth" Value="180"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="8 0"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+
+        <Style x:Key="RedButtonStyle" TargetType="{x:Type Button}"
+               BasedOn="{StaticResource ButtonBaseStyle}">
+            <Setter Property="BorderBrush" Value="DarkRed"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="OrangeRed"/>
+        </Style>
+
+        <Style x:Key="GreenButtonStyle" TargetType="{x:Type Button}"
+               BasedOn="{StaticResource ButtonBaseStyle}">
+            <Setter Property="BorderBrush" Value="ForestGreen"/>
+            <Setter Property="Foreground" Value="ForestGreen"/>
+            <Setter Property="Background" Value="GreenYellow"/>
+        </Style>
+
+        <Style x:Key="BlueButtonStyle" TargetType="{x:Type Button}"
+               BasedOn="{StaticResource ButtonBaseStyle}">
+            <Setter Property="BorderBrush" Value="DarkSlateBlue"/>
+            <Setter Property="Foreground" Value="DarkSlateBlue"/>
+            <Setter Property="Background" Value="SkyBlue"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel Orientation="Vertical"
+                Margin="10">
+        <Button x:Name="baseButton"
+                Content="Base Button Style"
+                Style="{StaticResource ButtonBaseStyle}"/>
+        <Button x:Name="redButton"
+                Content="Red Button Style"
+                Style="{StaticResource RedButtonStyle}"/>
+        <Button x:Name="greenButton"
+                Content="Green Button Style"
+                Style="{StaticResource GreenButtonStyle}"/>
+        <Button x:Name="blueButton"
+                Content="Blue Button Style"
+                Style="{StaticResource BlueButtonStyle}"/>
+    </StackPanel>
+</Window>

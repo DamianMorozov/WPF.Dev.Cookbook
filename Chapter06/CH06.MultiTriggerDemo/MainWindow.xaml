@@ -1,0 +1,35 @@
+﻿<Window x:Class="CH06.MultiTriggerDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Multi Trigger Demo" Height="130" Width="350">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsEnabled" Value="True" />
+                        <Condition Property="IsKeyboardFocused" Value="True" />
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="Foreground" Value="Green" />
+                        <Setter Property="Background" Value="LightGreen" />
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <TextBox Text="Focus your cursor here"
+                 FontSize="20"
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Center"
+                 Height="30"
+                 Margin="4"/>
+        <TextBox Text="Focus your cursor here"
+                 FontSize="20"
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Center"
+                 Height="30"
+                 Margin="4"/>
+    </StackPanel>
+</Window>

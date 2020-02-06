@@ -1,0 +1,57 @@
+﻿<Window x:Class="CH06.DataTriggerDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Data Trigger Demo" Height="150" Width="350">
+    <Window.Resources>
+        <Style TargetType="{x:Type Label}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=rdoRed, Path=IsChecked}"
+                             Value="True">
+                    <Setter Property="Content"
+                            Value="Red"/>
+                    <Setter Property="Background" 
+                            Value="Red"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=rdoGreen, Path=IsChecked}"
+                             Value="True">
+                    <Setter Property="Content"
+                            Value="Green"/>
+                    <Setter Property="Background" 
+                            Value="Green"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=rdoBlue, Path=IsChecked}"
+                             Value="True">
+                    <Setter Property="Content"
+                            Value="Blue"/>
+                    <Setter Property="Background" 
+                            Value="Blue"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Width="150"
+               Height="100"
+               Grid.Column="0"
+               Foreground="White"
+               FontSize="20"
+               BorderBrush="Gray"
+               BorderThickness="1"/>
+        <StackPanel Grid.Column="1"
+                    Margin="10">
+            <RadioButton x:Name="rdoRed"
+                         GroupName="colors"
+                         Content="Red (#FFFF0000)"/>
+            <RadioButton x:Name="rdoGreen"
+                         GroupName="colors"
+                         Content="Green (#FF00FF00)"/>
+            <RadioButton x:Name="rdoBlue"
+                         GroupName="colors"
+                         Content="Blue (#FF0000FF)"/>
+        </StackPanel>
+    </Grid>
+</Window>
