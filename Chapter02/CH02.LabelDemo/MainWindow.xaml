@@ -1,0 +1,19 @@
+﻿<Window x:Class="CH02.LabelDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Label Control Demo" Width="400" SizeToContent="Height">
+    <StackPanel Margin="10 10 10 20">
+        <!-- Label Control -->
+        <Label Content="1. This is a Label control" />
+        <Label Content="2. A Label control with text formatting"
+            FontWeight="Bold" Foreground="Red"
+            FontStyle="Italic"/>
+        <Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="3. A Rectangle" />
+                <Rectangle Width="20" Height="20" Fill="Red" Margin="10 0" />
+                <TextBlock Text="inside a Label control" />
+            </StackPanel>
+        </Label>
+    </StackPanel>
+</Window>

@@ -1,0 +1,56 @@
+﻿<Window x:Class="CH02.ComboBoxDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ComboBox Demo" Height="200" Width="400">
+    <StackPanel Orientation="Horizontal"
+                VerticalAlignment="Top">
+        <ComboBox Width="150" Height="26"
+                  Margin="10">
+            <ComboBoxItem Content="Item 1" />
+            <ComboBoxItem Content="Item 2" IsSelected="True" />
+            <ComboBoxItem Content="Item 3" />
+            <ComboBoxItem Content="Item 4" />
+            <ComboBoxItem Content="Item 5" />
+        </ComboBox>
+        
+        <ComboBox Width="150" Height="26"
+                  Margin="10">
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="10"
+                               Height="10"
+                               Fill="Red"
+                               Margin="0 0 8 0" />
+                    <TextBlock Text="Red (#FFFF0000)" />
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="10"
+                               Height="10"
+                               Fill="Green"
+                               Margin="0 0 8 0" />
+                    <TextBlock Text="Green (#FF00FF00)" />
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="10"
+                               Height="10"
+                               Fill="Blue"
+                               Margin="0 0 8 0" />
+                    <TextBlock Text="Red (#FF0000FF)" />
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+
+        <!--<ComboBox Width="150" Height="26"
+                  Margin="10" IsEditable="True">
+            <ComboBoxItem Content="Item 1" />
+            <ComboBoxItem Content="Item 2" IsSelected="True" />
+            <ComboBoxItem Content="Item 3" />
+            <ComboBoxItem Content="Item 4" />
+            <ComboBoxItem Content="Item 5" />
+        </ComboBox>-->
+    </StackPanel>
+</Window>

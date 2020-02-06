@@ -1,0 +1,29 @@
+﻿<Window x:Class="CH02.ImageDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Image Control Demo" Height="150" SizeToContent="Width">
+    <StackPanel Orientation="Horizontal">
+        <Image Source="demoImage.jpg"
+                Stretch="None"
+                Width="100" Height="100" 
+                Margin="10 10 5 10" />
+        <Image Source="demoImage.jpg"
+                Stretch="Fill"
+                Width="100" Height="100" 
+                Margin="10 10 5 10" />
+        <Image Source="demoImage.jpg"
+                Stretch="Uniform"
+                Width="100" Height="100" 
+                Margin="10 10 5 10" />
+        <Image Source="demoImage.jpg"
+                Stretch="UniformToFill"
+                Width="100" Height="100" 
+                Margin="10 10 5 10" />
+        <Image Margin="10 10 5 10">
+            <Image.Source>
+                <BitmapImage UriSource="demoImage.jpg"
+                             Rotation="Rotate90"/>
+            </Image.Source>
+        </Image>
+    </StackPanel>
+</Window>

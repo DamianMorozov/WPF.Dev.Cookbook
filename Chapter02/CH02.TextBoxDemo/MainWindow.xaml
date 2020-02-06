@@ -1,0 +1,19 @@
+﻿<Window x:Class="CH02.TextBoxDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TextBox Control Demo" Width="400" SizeToContent="Height">
+    <StackPanel Margin="10 10 10 20">
+        <TextBox Height="30" Margin="10 5"/>
+        <TextBox Text="Hello WPF!"
+                    FontSize="18" Foreground="Blue"
+                    FontWeight="Bold"
+                    Height="30" Margin="10 5"/>
+        <TextBox Text="This is a 'ReadOnly' TextBox control"
+                    IsReadOnly="True" Height="30" Margin="10 5"/>
+        <TextBox Text="This is a 'Disabled' TextBox control"
+                    IsEnabled="False" Height="30" Margin="10 5"/>
+        <TextBox TextWrapping="Wrap" AcceptsReturn="True"
+                    Height="60" VerticalScrollBarVisibility="Auto"
+                    Margin="10 5" />
+    </StackPanel>
+</Window>

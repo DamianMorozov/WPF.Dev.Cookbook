@@ -1,0 +1,19 @@
+﻿<Window x:Class="CH02.SliderDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Slider Demo" Height="100" Width="300">
+    <StackPanel Margin="10">
+        <Slider x:Name="slider"
+                Minimum="0" Maximum="100"                
+                Value="65"
+                SmallChange="5"
+                LargeChange="5"
+                TickPlacement="BottomRight"
+                TickFrequency="20"
+                IsSnapToTickEnabled="True" />
+        <TextBlock Margin="4">
+            <Run Text="Current slider value: " />
+            <Run Text="{Binding Value, ElementName=slider}" />
+        </TextBlock>
+    </StackPanel>
+</Window>

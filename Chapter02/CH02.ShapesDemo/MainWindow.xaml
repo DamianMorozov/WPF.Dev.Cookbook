@@ -1,0 +1,50 @@
+﻿<Window x:Class="CH02.ShapesDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shapes Demo" SizeToContent="WidthAndHeight">
+    <UniformGrid Columns="3" Margin="10 10 10 20">
+        <Rectangle Width="200" Height="100"
+                   Stroke="DarkBlue" StrokeThickness="5"
+                   Fill="SkyBlue" Margin="10 5" />
+
+        <Ellipse Width="200" Height="100"
+                 Stroke="DarkBlue" StrokeThickness="5"
+                 Fill="SkyBlue" Margin="10 5" />
+
+        <Line X1="10" Y1="80" X2="190" Y2="20"
+              Stroke="DarkBlue" StrokeThickness="5" Margin="10 5" />
+
+        <Polyline Points="10,60 60,180 100,20 180,80 120,140"
+                  Stroke="DarkBlue" StrokeThickness="5" Margin="10 5" />
+
+        <Polygon Points="10,60 60,180 100,20 180,80 120,140"
+                 Fill="SkyBlue" Stroke="DarkBlue" StrokeThickness="5" Margin="10 5" />
+
+        <Path Data="M10,60 60,180 C100,20 180,80 120,140"
+              Stroke="DarkBlue" StrokeThickness="5" Margin="10 5" />
+
+        <Path Stroke="DarkBlue" StrokeThickness="5">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection>
+                            <PathFigure StartPoint="10,100">
+                                <PathFigure.Segments>
+                                    <PathSegmentCollection>
+                                        <ArcSegment Point="40,80" />
+                                        <BezierSegment Point1="100,300" 
+                                                       Point2="100,-100" 
+                                                       Point3="200,150" />
+                                        <BezierSegment Point1="100,200" 
+                                                       Point2="200,-10" 
+                                                       Point3="100,150" />
+                                    </PathSegmentCollection>
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </UniformGrid>
+</Window>

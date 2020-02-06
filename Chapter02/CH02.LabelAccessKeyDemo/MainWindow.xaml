@@ -1,0 +1,14 @@
+﻿<Window x:Class="CH02.LabelAccessKeyDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Label with an Access Key Demo" Width="400" SizeToContent="Height">
+    <StackPanel Margin="10 10 10 20">
+        <Label Content="Enter _Username:"
+                Target="{Binding ElementName=txbUsername}" />
+        <TextBox x:Name="txbUsername" Margin="6 0" />
+
+        <Label Content="Enter _Password:"
+                Target="{Binding ElementName=txbPassword}" />
+        <TextBox x:Name="txbPassword" Margin="6 0" />
+    </StackPanel>
+</Window>

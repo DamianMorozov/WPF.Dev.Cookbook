@@ -1,0 +1,29 @@
+﻿<Window x:Class="CH02.ToolBarDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ToolBar Demo" Height="150" Width="400" FontSize="14">
+    <DockPanel>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Content="B" FontWeight="Bold"
+                        Width="20" Click="OnBoldButtonClicked"/>
+                <Button Content="I" FontStyle="Italic"
+                        Width="20"/>
+                <Button Width="20">
+                    <TextBlock Text="U" TextDecorations="Underline"/>
+                </Button>
+            </ToolBar>
+            <ToolBar>
+                <ComboBox Width="50">
+                    <ComboBoxItem Content="8"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem Content="12"/>
+                    <ComboBoxItem Content="14" IsSelected="True"/>
+                    <ComboBoxItem Content="16"/>
+                </ComboBox>
+            </ToolBar>
+        </ToolBarTray>
+        <TextBox x:Name="txtBox" Text="Sample Text"
+                 AcceptsReturn="True" TextWrapping="Wrap" />
+    </DockPanel>
+</Window>

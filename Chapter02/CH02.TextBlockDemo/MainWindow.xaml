@@ -1,0 +1,46 @@
+﻿<Window x:Class="CH02.TextBlockDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TextBlock Control Demo" Width="400" SizeToContent="Height">
+    <StackPanel Margin="10 10 10 20">
+        <!-- TextBlock (Simple) -->
+        <TextBlock Text="1. This is a TextBlock control, with 'Text' property"
+                    Margin="10 5" />
+        <TextBlock Margin="10 5">
+            2. This is a TextBlock control, having text as Content
+        </TextBlock>
+
+        <!-- TextBlock (Formatting) -->
+        <TextBlock Text="3. This is a TextBlock control, having text formatting"
+                    FontWeight="Bold" 
+                    FontStyle="Italic" 
+                    TextDecorations="Underline"
+                    Foreground="Red"
+                    Margin="10 5" />
+        <TextBlock Text="4. TextBlock with different FontFamily"
+                    FontFamily="Lucida Handwriting"
+                    FontSize="16" Foreground="Blue"
+                    Margin="10 5" />
+        <TextBlock Text="5. This is a TextBlock control, having long text content, wrapped automatically using 'TextWrapping' property."
+                    TextWrapping="Wrap"
+                    Margin="10 5" />
+        <TextBlock Text="6. This is a TextBlock control, having long text content, trimmed automatically using 'TextTrimming' property."
+                    TextTrimming="CharacterEllipsis"
+                    Margin="10 5" />
+
+        <!-- TextBlock (Advance Formatting) -->
+        <TextBlock Margin="10, 5">
+            7. TextBlock with <Bold>Bold</Bold>, <Italic>Italics</Italic>, <Underline>Underlined</Underline> text
+        </TextBlock>
+        <TextBlock Margin="10, 5">
+            8. TextBlock with LineBreak<LineBreak/> in between the text
+        </TextBlock>
+        <TextBlock Margin="10, 5">
+            9. TextBlock with a <Hyperlink NavigateUri="http://www.kunal-chowdhury.com">Hyperlink</Hyperlink> text in it
+        </TextBlock>
+        <TextBlock Margin="10, 5"
+                    TextWrapping="Wrap">
+            10. This is a <Span><Bold>TextBlock</Bold></Span> control, with <Span Foreground="Brown">Span</Span> Elements and <Run TextDecorations="Underline">Run</Run> commands in it
+        </TextBlock>
+    </StackPanel>
+</Window>
