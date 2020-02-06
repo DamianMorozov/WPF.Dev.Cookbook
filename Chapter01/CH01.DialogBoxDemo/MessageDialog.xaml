@@ -1,0 +1,19 @@
+﻿<Window x:Class="CH01.DialogBoxDemo.MessageDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ShowInTaskbar="False" WindowStyle="SingleBorderWindow"
+        Title="Message" Height="150" Width="400" 
+        FontSize="14" Topmost="True" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Margin="8"
+                   Text="Thank you for reading 'Windows Presentation Foundation Cookbook'. Click 'OK' to continue next."/>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                    Margin="4">
+            <Button Content="OK" Width="60" Height="30"
+                    Margin="4" IsDefault="True" Click="OnOKClicked"/>
+            <Button Content="Cancel" Width="60" Height="30"
+                    Margin="4" IsCancel="True" Click="OnCancelClicked"/>
+        </StackPanel>
+    </Grid>
+</Window>

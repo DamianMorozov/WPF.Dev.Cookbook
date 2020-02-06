@@ -1,0 +1,12 @@
+﻿<Window x:Class="CH01.DialogBoxDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="190" Width="400">
+    <Grid>
+        <ListBox x:Name="result" Height="100" Margin="8"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Top" />
+        <Button Content="Show Message" Width="150" Height="30" 
+                VerticalAlignment="Bottom" Margin="8"
+                Click="OnShowMessageButtonClicked"/>
+    </Grid>
+</Window>
