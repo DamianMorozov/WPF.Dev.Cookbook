@@ -1,0 +1,33 @@
+﻿<Window x:Class="CH03.WrapPanelDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WrapPanel Demo" Height="160" Width="350">
+    <WrapPanel Orientation="Horizontal">
+        <Button Content="Button 1" Margin="4"
+                Width="100" Height="30"/>
+        <Button Content="Button 2" Margin="4"
+                Width="100" Height="30"/>
+        <Button Content="Button 3" Margin="4"
+                Width="100" Height="30"/>
+        <Button Content="Button 4" Margin="4"
+                Width="208" Height="30"/>
+        <Button Content="Button 5" Margin="4"
+                Width="100" Height="30"/>
+        <Button Content="Button 6" Margin="4"
+                Width="60" Height="30"/>
+        <Button Content="Button 7" Margin="4"
+                Width="60" Height="30"/>
+        <Button Content="Button 8" Margin="4"
+                Width="180" Height="30"/>
+    </WrapPanel>
+
+    <!--<WrapPanel Orientation="Vertical"
+               ItemWidth="100" ItemHeight="30">
+        <Button Content="Button 1" Margin="4" />
+        <Button Content="Button 2" Margin="4" />
+        <Button Content="Button 3" Margin="4" />
+        <Button Content="Button 4" Margin="4" />
+        <Button Content="Button 5" Margin="4" />
+        <Button Content="Button 6" Margin="4" />
+    </WrapPanel>-->
+</Window>

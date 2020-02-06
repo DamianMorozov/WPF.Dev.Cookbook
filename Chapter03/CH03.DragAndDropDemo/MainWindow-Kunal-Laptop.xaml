@@ -1,0 +1,36 @@
+﻿<Window x:Class="CH03.DragAndDropDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Drag and Drop Demo" Height="250" Width="430">
+    <StackPanel Orientation="Horizontal">
+        <WrapPanel x:Name="sourcePanel"
+                    ItemHeight="60" ItemWidth="100"
+                    Width="200" Margin="4"
+                    Background="LightGoldenrodYellow"
+                    MouseLeftButtonDown="OnDrag">
+            <Label Content="Item 1"
+                   Background="Olive" Margin="4"
+                   Foreground="White" FontSize="22" />
+            <Label Content="Item 2"
+                   Background="Olive" Margin="4"
+                   Foreground="White" FontSize="22" />
+            <Label Content="Item 3"
+                   Background="Olive" Margin="4"
+                   Foreground="White" FontSize="22" />
+            <Label Content="Item 4"
+                   Background="Olive" Margin="4"
+                   Foreground="White" FontSize="22" />
+            <Label Content="Item 5"
+                   Background="Olive" Margin="4"
+                   Foreground="White" FontSize="22" />
+        </WrapPanel>
+        <WrapPanel x:Name="targetPanel"
+                   ItemHeight="60" ItemWidth="100"
+                   Width="200" Margin="4"
+                   Background="OldLace"
+                   AllowDrop="True"
+                   Drop="OnDrop">
+             <!-- This is the DROP Target -->
+        </WrapPanel>
+    </StackPanel>
+</Window>

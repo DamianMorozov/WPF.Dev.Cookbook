@@ -1,0 +1,8 @@
+﻿<Window x:Class="CH03.DynamicPanelDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dynamic Panel Demo" Height="300" Width="500">
+    <Canvas x:Name="canvasPanel" Background="LightGoldenrodYellow"
+            MouseLeftButtonDown="OnMouseLeftButtonDown"
+            MouseRightButtonDown="OnMouseRightButtonDown"/>
+</Window>

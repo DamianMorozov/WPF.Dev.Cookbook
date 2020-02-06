@@ -1,0 +1,26 @@
+﻿<Window x:Class="CH03.DockPanelDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DockPanel Demo" Height="220" Width="500">
+    <DockPanel>
+        <Label Content="Button (DockPanel.Dock='Right')"
+               Background="YellowGreen"
+               Margin="4" Padding="4"
+               DockPanel.Dock="Right"/>
+        <Label Content="Button (DockPanel.Dock='Top')"
+               Background="GreenYellow"
+               Margin="4" Padding="4"
+               DockPanel.Dock="Top"/>
+        <Label Content="Button (DockPanel.Dock='Bottom')"
+               Background="SkyBlue"
+               Margin="4" Padding="4"
+               DockPanel.Dock="Bottom"/>
+        <Label Content="Button (DockPanel.Dock='Left')"
+               Background="Orange"
+               Margin="4" Padding="4"
+               DockPanel.Dock="Left"/>
+        <Label Content="Button (None)"
+               Background="Pink"
+               Margin="4" Padding="4"/>
+    </DockPanel>
+</Window>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="CH03.UniformGridDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Uniform Grid Demo" Height="160" Width="400">
+    <UniformGrid>
+        <Label Content="Cell 1" Background="Yellow" />
+        <Label Content="Cell 2" Background="YellowGreen" />
+        <Label Content="Cell 3" Background="Orange" />
+        <Label Content="Cell 4" Background="OrangeRed" />
+        <Label Content="Cell 5" Background="Violet" />
+        <Label Content="Cell 6" Background="DeepSkyBlue" />
+        <Label Content="Cell 7" Background="SkyBlue" />
+    </UniformGrid>
+    
+    <!--<UniformGrid Rows="1">
+        <Label Content="Cell 1" Background="Yellow" />
+        <Label Content="Cell 2" Background="YellowGreen" />
+        <Label Content="Cell 3" Background="Orange" />
+        <Label Content="Cell 4" Background="OrangeRed" />
+        <Label Content="Cell 5" Background="Violet" />
+        <Label Content="Cell 6" Background="DeepSkyBlue" />
+        <Label Content="Cell 7" Background="SkyBlue" />
+    </UniformGrid>-->
+
+    <!--<UniformGrid Rows="2" Columns="4">
+        <Label Content="Cell 1" Background="Yellow" />
+        <Label Content="Cell 2" Background="YellowGreen" />
+        <Label Content="Cell 3" Background="Orange" />
+        <Label Content="Cell 4" Background="OrangeRed" />
+        <Label Content="Cell 5" Background="Violet" />
+        <Label Content="Cell 6" Background="DeepSkyBlue" />
+        <Label Content="Cell 7" Background="SkyBlue" />
+    </UniformGrid>-->
+
+    <!--<UniformGrid Columns="4" FirstColumn="2">
+        <Label Content="Cell 1" Background="Yellow" />
+        <Label Content="Cell 2" Background="YellowGreen" />
+        <Label Content="Cell 3" Background="Orange" />
+        <Label Content="Cell 4" Background="OrangeRed" />
+        <Label Content="Cell 5" Background="Violet" />
+        <Label Content="Cell 6" Background="DeepSkyBlue" />
+        <Label Content="Cell 7" Background="SkyBlue" />
+    </UniformGrid>-->
+
+    <!--<UniformGrid FlowDirection="RightToLeft">
+        <Label Content="Cell 1" Background="Yellow" />
+        <Label Content="Cell 2" Background="YellowGreen" />
+        <Label Content="Cell 3" Background="Orange" />
+        <Label Content="Cell 4" Background="OrangeRed" />
+        <Label Content="Cell 5" Background="Violet" />
+        <Label Content="Cell 6" Background="DeepSkyBlue" />
+        <Label Content="Cell 7" Background="SkyBlue" />
+    </UniformGrid>-->
+</Window>
