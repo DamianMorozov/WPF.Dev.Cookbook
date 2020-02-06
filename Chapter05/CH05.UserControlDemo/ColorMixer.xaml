@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="CH05.UserControlDemo.ColorMixer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CH05.UserControlDemo"
+             Width="400" Height="200" x:Name="userControl">
+    <UserControl.Resources>
+        <local:ColorToByteConverter x:Key="ColorToByteConverter"/>
+    </UserControl.Resources>
+    <Grid Margin="4" DataContext="{Binding ElementName=userControl}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderThickness="1" BorderBrush="Gray"
+                Grid.Row="0" Grid.Column="0">
+            <Border.Background>
+                <SolidColorBrush Color="{Binding SelectedColor}"/>
+            </Border.Background>
+        </Border>
+        <!--<StackPanel Orientation="Vertical"
+            Grid.Row="0" Grid.Column="1"
+            Margin="8 4">
+            <TextBlock Text="R:"/>
+            <TextBox Width="100" />
+            <TextBlock Text="G:"/>
+            <TextBox Width="100" />
+            <TextBlock Text="B:"/>
+            <TextBox Width="100" />
+            <TextBlock Text="A:"/>
+            <TextBox Width="100" />
+        </StackPanel>-->
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="0" Grid.Column="1"
+                    Margin="8 4">
+            <TextBlock Text="R:"/>
+            <TextBox Width="100"
+                     Text="{Binding SelectedColor, Converter={StaticResource ColorToByteConverter}, ConverterParameter=r, Mode=TwoWay}"/>
+            <TextBlock Text="G:"/>
+            <TextBox Width="100"
+                     Text="{Binding SelectedColor, Converter={StaticResource ColorToByteConverter}, ConverterParameter=g, Mode=TwoWay}"/>
+            <TextBlock Text="B:"/>
+            <TextBox Width="100"
+                     Text="{Binding SelectedColor, Converter={StaticResource ColorToByteConverter}, ConverterParameter=b, Mode=TwoWay}"/>
+            <TextBlock Text="A:"/>
+            <TextBox Width="100"
+                     Text="{Binding SelectedColor, Converter={StaticResource ColorToByteConverter}, ConverterParameter=a, Mode=TwoWay}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="4 10 4 4"
+                    HorizontalAlignment="Right">
+            <Button Content="OK" Margin="4"
+                    Width="50" Click="OnOkClicked"/>
+            <Button Content="Cancel" Margin="4"
+                    Width="50" Click="OnCancelClicked"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

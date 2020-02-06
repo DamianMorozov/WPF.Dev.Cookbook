@@ -1,0 +1,27 @@
+﻿<Window x:Class="CH05.SearchControlDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:CH05.SearchControlDemo"
+        Title="Custom Control Demo" Height="100" Width="320">
+    <Grid>
+        <!--<controls:SearchControl/>-->
+        <!--<controls:SearchControl 
+                Background="#2200FF00"
+                BorderThickness="2"
+                BorderBrush="GreenYellow"
+                Foreground="Green"/>-->
+        <!--<controls:SearchControl 
+                SearchTerm="my search term"
+                Background="#2200FF00"
+                BorderThickness="2"
+                BorderBrush="GreenYellow"
+                Foreground="Green"/>-->
+        <controls:SearchControl 
+                SearchTerm="my search term"
+                Background="#2200FF00"
+                BorderThickness="2"
+                BorderBrush="GreenYellow"
+                Foreground="Green"
+                SearchButtonClick="OnSearchButtonClicked"/>
+    </Grid>
+</Window>

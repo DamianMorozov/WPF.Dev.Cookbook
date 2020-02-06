@@ -1,0 +1,12 @@
+﻿<Window x:Class="CH05.NamespaceCustomizationDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        xmlns:behaviors="http://schemas.kunal-chowdhury.com/xaml/behaviors"
+        xmlns:converters="http://schemas.kunal-chowdhury.com/xaml/converters"
+        
+        Title="XMLNS Customization Demo" Height="350" Width="525">
+    <Grid>
+        
+    </Grid>
+</Window>
