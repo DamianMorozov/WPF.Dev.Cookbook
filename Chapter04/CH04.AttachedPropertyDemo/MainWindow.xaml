@@ -1,0 +1,15 @@
+﻿<Window x:Class="CH04.AttachedPropertyDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:extensions="clr-namespace:CH04.AttachedPropertyDemo"
+        Title="Attached Property Demo" Height="150" Width="340">
+    <StackPanel Margin="15">
+        <TextBox Text="Normal TextBox Control"
+                 Width="200" Height="30"
+                 Margin="4"/>
+        <TextBox Text="Select On Focus: Enabled"
+                 extensions:TextBoxExtensions.SelectOnFocus="True"
+                 Width="200" Height="30"
+                 Margin="4"/>
+    </StackPanel>
+</Window>

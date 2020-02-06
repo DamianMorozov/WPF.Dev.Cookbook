@@ -1,0 +1,26 @@
+﻿<Window x:Class="CH04.DataGridFilterDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Name="window"
+        Title="Filtering Demo" Height="200" Width="400">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="4 8">
+            <TextBlock Text="Filter records: "/>
+            <TextBox x:Name="searchBox" Width="100"
+                     TextChanged="OnFilterChanged"/>
+        </StackPanel>
+        <DataGrid x:Name="dataGrid"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  ItemsSource="{Binding Employees, ElementName=window}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="EMP ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Department" Binding="{Binding Department}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</Window>

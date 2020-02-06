@@ -1,0 +1,55 @@
+﻿<Window x:Class="CH04.DataGridGroupDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Name="window"
+        Title="Grouping Demo" Height="250" Width="400">
+    <StackPanel>
+        <DataGrid x:Name="dataGrid"
+              ItemsSource="{Binding Employees, ElementName=window}"
+              AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="EMP ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Department" Binding="{Binding Department}"/>
+            </DataGrid.Columns>
+
+            <DataGrid.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="{x:Type GroupItem}">
+                            <Setter Property="Margin" Value="0,0,0,5"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type GroupItem}">
+                                        <Expander IsExpanded="True">
+                                            <Expander.Header>
+                                                <!--<TextBlock Text="{Binding Path=Name}" Margin="5,0,0,0"/>-->
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Path=Name}" Margin="5,0,0,0"/>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Margin="5,0,0,0"
+                                                               Text="{Binding Path=ItemCount}"/>
+                                                        <TextBlock Text=" Item(s)"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </Expander.Header>
+                                            <Expander.Content>
+                                                <ItemsPresenter />
+                                            </Expander.Content>
+                                        </Expander>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </DataGrid.GroupStyle>
+        </DataGrid>
+        <CheckBox x:Name="groupByDepartment"
+              Content="Group by Department" 
+              HorizontalAlignment="Right"
+              Margin="10"
+              Click="OnGroupByDepartment"/>
+    </StackPanel>
+</Window>
