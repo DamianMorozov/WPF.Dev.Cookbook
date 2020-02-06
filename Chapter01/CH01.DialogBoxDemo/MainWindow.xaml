@@ -1,12 +1,23 @@
 ﻿<Window x:Class="CH01.DialogBoxDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="190" Width="400">
+        Title="MainWindow" Height="500" Width="400" FontSize="16">
     <Grid>
-        <ListBox x:Name="result" Height="100" Margin="8"
-                    HorizontalAlignment="Stretch" VerticalAlignment="Top" />
-        <Button Content="Show Message" Width="150" Height="30" 
-                VerticalAlignment="Bottom" Margin="8"
-                Click="OnShowMessageButtonClicked"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Name="ButtonMessage" Content="Show MessageDialog" Grid.Row="0" Margin="2" Click="ButtonMessage_OnClick"/>
+        <Button Name="ButtonOpen" Content="Open Common Dialog" Grid.Row="1" Margin="2" Click="ButtonOpen_OnClick"/>
+        <Button Name="ButtonSave" Content="Save Common Dialog" Grid.Row="2" Margin="2" Click="ButtonSave_OnClick"/>
+        <Button Name="ButtonPrint" Content="Print Common Dialog" Grid.Row="3" Margin="2" Click="ButtonPrint_OnClick"/>
+        <Button Name="ButtonFont" Content="Font Common Dialog" Grid.Row="4" Margin="2" Click="ButtonFont_OnClick"/>
+        <Button Name="ButtonColor" Content="Color Common Dialog" Grid.Row="5" Margin="2" Click="ButtonColor_OnClick"/>
+        <ListBox x:Name="ListBoxResult" Grid.Row="6" />
     </Grid>
 </Window>
