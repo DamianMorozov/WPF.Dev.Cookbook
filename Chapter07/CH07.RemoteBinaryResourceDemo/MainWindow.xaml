@@ -1,0 +1,8 @@
+﻿<Window x:Class="CH07.RemoteBinaryResourceDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Remote Resource Library Demo" Height="250" Width="350">
+    <Grid Margin="10">
+        <Image Source="/CH07.ResourceLibrary;component/Images/image1.png"/>
+    </Grid>
+</Window>

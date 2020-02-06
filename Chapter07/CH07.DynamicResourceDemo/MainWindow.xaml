@@ -1,0 +1,34 @@
+﻿<Window x:Class="CH07.DynamicResourceDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Logical Resource (Dynamic) Demo" Height="150" Width="380">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="myLinearBrush">
+            <GradientStop Offset="0"
+                          Color="LightYellow"/>
+            <GradientStop Offset="1"
+                          Color="Green"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+    <StackPanel Orientation="Horizontal">
+        <Border Height="80"
+                Width="150"
+                Margin="8"
+                Background="{DynamicResource myLinearBrush}"/>
+        <StackPanel Margin="10">
+            <RadioButton GroupName="colorGroup"
+                         Content="Red"
+                         Margin="4"
+                         Checked="OnRedRadioChecked"/>
+            <RadioButton GroupName="colorGroup"
+                         Content="Green"
+                         IsChecked="True"
+                         Margin="4"
+                         Checked="OnGreenRadioChecked"/>
+            <RadioButton GroupName="colorGroup"
+                         Content="Blue"
+                         Margin="4"
+                         Checked="OnBlueRadioChecked"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

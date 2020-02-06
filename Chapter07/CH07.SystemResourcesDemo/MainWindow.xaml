@@ -1,0 +1,14 @@
+﻿<Window x:Class="CH07.SystemResourcesDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="System Resources Demo" Height="160" Width="350">
+    <Grid>
+        <Rectangle Fill="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}"
+                   Height="100"
+                   Width="300"/>
+        <!--<TextBlock FontFamily="{DynamicResource {x:Static SystemFonts.CaptionFontFamily}}"
+                   FontSize="{DynamicResource {x:Static SystemFonts.CaptionFontSizeKey}}"
+                   FontWeight="{DynamicResource {x:Static SystemFonts.CaptionFontWeightKey}}"
+                   Text="Hello World!"/>-->
+    </Grid>
+</Window>

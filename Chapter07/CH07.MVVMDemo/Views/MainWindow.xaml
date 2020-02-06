@@ -1,0 +1,50 @@
+﻿<Window x:Class="CH07.MVVMDemo.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewmodels="clr-namespace:CH07.MVVMDemo.ViewModels"
+        xmlns:commands="clr-namespace:CH07.MVVMDemo.Commands"
+        Title="MainWindow" Height="200" Width="500">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static commands:RoutedCommands.AddCommand}"
+                        CanExecute="CanExecute_AddCommand"
+                        Executed="Execute_AddCommand"/>
+    </Window.CommandBindings>
+    <Window.Resources>
+        <viewmodels:MainWindowViewModel x:Key="ViewModel"/>
+    </Window.Resources>
+    <DockPanel DataContext="{StaticResource ViewModel}"
+               Margin="10">
+        <StackPanel Orientation="Vertical"
+                    DockPanel.Dock="Left">
+            <ListBox Width="180" Height="110"
+                     ItemsSource="{Binding UserCollection}"
+                     SelectedItem="{Binding SelectedUser}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <Run Text="{Binding Firstname}"/>
+                            <Run Text="{Binding Lastname}"/>
+                        </TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock DataContext="{Binding SelectedUser}">
+                <Run Text="Selected:"/>
+                <Run Text="{Binding Firstname}"/>
+                <Run Text="{Binding Lastname}"/>
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    Margin="4 0"
+                    DockPanel.Dock="Right"
+                    DataContext="{Binding NewUserDetails}">
+            <TextBlock Text="Firstname"/>
+            <TextBox Text="{Binding Firstname, Mode=TwoWay}"/>
+            <TextBlock Text="Lastname"/>
+            <TextBox Text="{Binding Lastname, Mode=TwoWay}"/>
+            <Button Content="Add"
+                    Margin="0 8"
+                    Command="{x:Static commands:RoutedCommands.AddCommand}"/>
+        </StackPanel>
+    </DockPanel>
+</Window>
