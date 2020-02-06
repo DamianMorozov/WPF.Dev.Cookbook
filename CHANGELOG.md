@@ -2,7 +2,7 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.2.14] - 2020-02-06
+## [0.2.15] - 2020-02-06
 ### Updated
   [*] .gitattributes
   [*] .gitignore
@@ -16,5 +16,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   [*] Unpacked Chapter08\code.zip
   [*] Unpacked Chapter09\code.zip
   [*] Unpacked Chapter10\code.zip
+  [*] Unpacked Chapter11\code.zip
 ### Forked
   [+] Git fork from https://github.com/PacktPublishing/Windows-Presentation-Foundation-Development-Cookbook
