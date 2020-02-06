@@ -1,0 +1,49 @@
+﻿<Window x:Class="CH09.ClientDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Name="window"
+        Title="WCF Service Integration Demo" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Employees, ElementName=window}"
+                  Grid.Row="0" 
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" 
+                                    Width="80"
+                                    Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Name"
+                                    Width="200">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding StringFormat="{}{0} {1}">
+                            <Binding Path="FirstName"/>
+                            <Binding Path="LastName"/>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Designation" 
+                                    Width="150"
+                                    Binding="{Binding Designation}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    Margin="8">
+            <Button Content="Refresh"
+                    Margin="4"
+                    Height="26"
+                    Width="80"
+                    Click="OnRefreshClicked"/>
+            <Button Content="Add"
+                    Margin="4"
+                    Height="26"
+                    Width="80"
+                    Click="OnAddClicked"/>
+        </StackPanel>
+    </Grid>
+</Window>
