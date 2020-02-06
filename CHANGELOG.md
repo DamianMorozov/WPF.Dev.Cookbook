@@ -2,7 +2,7 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.2.18] - 2020-02-06
+## [0.2.19] - 2020-02-06
 ### Updated
   [*] .gitattributes
   [*] .gitignore
@@ -20,5 +20,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   [*] README.md
   [*] Chapter01\CH01.HelloWPFDemo
   [*] Chapter01\CH01.WindowDemo
+  [*] Chapter01\CH01.PageDemo
 ### Forked
   [+] Git fork from https://github.com/PacktPublishing/Windows-Presentation-Foundation-Development-Cookbook

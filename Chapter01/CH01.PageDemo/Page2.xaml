@@ -5,8 +5,8 @@
     <Grid>
         <TextBlock Text="This is Page 2" FontSize="20"
                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Content="Previous" Height="30" Width="120" Margin="20"
+        <Button Name="ButtonPrevious" Content="Previous" Height="30" Width="120" Margin="20"
                 HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Click="OnPreviousButtonClicked"/>
+                Click="ButtonPrevious_OnClick"/>
     </Grid>
 </Page>
