@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.21] - 2020-02-07
+### Updated
+  [*] CH01.OwnershipDemo
+
 ## [0.2.20] - 2020-02-06
 ### Updated
   [*] .gitattributes

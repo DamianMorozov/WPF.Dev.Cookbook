@@ -2,8 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         SizeToContent="WidthAndHeight" ResizeMode="NoResize"
-        Title="ToolBox">
-    <StackPanel Margin="10">
+        Title="ToolBox" ShowInTaskbar="False">
+    <StackPanel Margin="5" Orientation="Horizontal">
         <Button Content="Bold" Width="70" Margin="4"/>
         <Button Content="Italics" Width="70" Margin="4"/>
         <Button Content="Underlined" Width="70" Margin="4"/>
