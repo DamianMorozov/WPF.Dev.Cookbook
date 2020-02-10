@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.22] - 2020-02-10
+### Updated
+  [*] CH01.SingleInstanceDemo
+
 ## [0.2.21] - 2020-02-07
 ### Updated
   [*] CH01.OwnershipDemo

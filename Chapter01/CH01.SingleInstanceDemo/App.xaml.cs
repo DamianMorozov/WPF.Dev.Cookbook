@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace CH01.SingleInstanceDemo
@@ -13,14 +8,18 @@ namespace CH01.SingleInstanceDemo
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application
+    public partial class App
     {
         [DllImport("user32", CharSet = CharSet.Unicode)]
-        static extern IntPtr FindWindow(string cls, string win);
+        private static extern IntPtr FindWindow(string cls, string win);
 
         [DllImport("user32")]
-        static extern IntPtr SetForegroundWindow(IntPtr hWnd);
+        private static extern IntPtr SetForegroundWindow(IntPtr hWnd);
 
+        /// <summary>
+        /// OnStartup
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -28,7 +27,7 @@ namespace CH01.SingleInstanceDemo
             var mutex = new Mutex(true, "SingleInstanceDemo", out bool isNewInstance);
             if (!isNewInstance)
             {
-                // MessageBox.Show("Application instance is already running!");
+                MessageBox.Show("Application instance is already running!");
                 ActivateWindow();
                 Shutdown();
             }
