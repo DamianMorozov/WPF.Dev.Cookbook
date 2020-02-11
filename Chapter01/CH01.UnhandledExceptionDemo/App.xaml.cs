@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 
 namespace CH01.UnhandledExceptionDemo
 {
-    public partial class App : Application
+    public partial class App
     {
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -22,6 +17,8 @@ namespace CH01.UnhandledExceptionDemo
         private void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             e.Handled = true;
+            // Logging exception.
+            // Maybe restart app.
         }
 
         private void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
