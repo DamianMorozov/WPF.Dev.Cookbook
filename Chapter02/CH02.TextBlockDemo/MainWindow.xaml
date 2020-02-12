@@ -1,7 +1,8 @@
 ﻿<Window x:Class="CH02.TextBlockDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="TextBlock Control Demo" Width="400" SizeToContent="Height">
+        Title="TextBlock Control Demo" Width="400" SizeToContent="Height"
+        WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
     <StackPanel Margin="10 10 10 20">
         <!-- TextBlock (Simple) -->
         <TextBlock Text="1. This is a TextBlock control, with 'Text' property"

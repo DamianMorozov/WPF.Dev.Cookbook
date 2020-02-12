@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.25] - 2020-02-12
+### Updated
+  [*] CH02.TextBlockDemo
+
 ## [0.2.24] - 2020-02-11
 ### Updated
   [*] CH01.CommandLineArgumentDemo
