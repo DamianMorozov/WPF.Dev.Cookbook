@@ -2,9 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.2.26] - 2020-02-17
+## [0.2.27] - 2020-02-17
 ### Updated
   [*] CH02.LabelDemo
+  [*] CH02.LabelAccessKeyDemo
 
 ## [0.2.25] - 2020-02-12
 ### Updated
