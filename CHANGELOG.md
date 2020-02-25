@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.37] - 2020-02-25
+### Updated
+  [*] CH02.CalendarDemo
+
 ## [0.2.36] - 2020-02-21
 ### Updated
   [*] CH02.SliderDemo
