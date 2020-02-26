@@ -1,28 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CH02.ComboBoxDemo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {
             InitializeComponent();
+            ComboBox1.SelectionChanged += ComboBox_SelectionChanged;
+            ComboBox2.SelectionChanged += ComboBox_SelectionChanged;
+            ComboBox3.SelectionChanged += ComboBox_SelectionChanged;
+        }
+
+        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (sender is ComboBox comboBox)
+            {
+                if (comboBox.SelectedItem is ComboBoxItem item)
+                {
+                    if (item.Content is StackPanel stackPanel)
+                    {
+                        foreach (var childStackPanel in stackPanel.Children)
+                        {
+                            if (childStackPanel is TextBlock textBlock)
+                                MessageBox.Show($"Selected item: {textBlock.Text}");
+                        }
+                    }
+                    else
+                        MessageBox.Show($"Selected item: {item.Content}");
+                }
+            }
         }
     }
 }
