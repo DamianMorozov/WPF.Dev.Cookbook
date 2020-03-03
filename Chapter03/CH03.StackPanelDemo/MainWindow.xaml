@@ -1,30 +1,25 @@
 ﻿<Window x:Class="CH03.StackPanelDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="StackPanel Demo" Height="190" Width="400">
+        Title="StackPanel Demo" Height="270" Width="400">
     <StackPanel>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Button 1" Margin="4" />
-            <Button Content="Button 2" Margin="4" />
-            <Button Content="Button 3" Margin="4" />
-            <Button Content="Button 4" Margin="4" />
+            <Button Content="Button 1" Margin="2" />
+            <Button Content="Button 2" Margin="2" />
+            <Button Content="Button 3" Margin="2" />
+            <Button Content="Button 4" Margin="2" />
         </StackPanel>
         <StackPanel Orientation="Vertical">
-            <Button Content="Button 5" Margin="4" />
-            <Button Content="Button 6" Margin="4" />
-            <Button Content="Button 7" Margin="4" />
-            <Button Content="Button 8" Margin="4" />
+            <Button Content="Button 5" Margin="2" />
+            <Button Content="Button 6" Margin="2" />
+            <Button Content="Button 7" Margin="2" />
+            <Button Content="Button 8" Margin="2" />
         </StackPanel>
-        
-        <!--<StackPanel Orientation="Vertical">
-            <Button Content="Button (Left)" Margin="4"
-                    HorizontalAlignment="Left"/>
-            <Button Content="Button (Center)" Margin="4"
-                    HorizontalAlignment="Center"/>
-            <Button Content="Button (Right)" Margin="4"
-                    HorizontalAlignment="Right"/>
-            <Button Content="Button (Stretch)" Margin="4"
-                    HorizontalAlignment="Stretch" />
-        </StackPanel>-->
+        <StackPanel Orientation="Vertical">
+            <Button Content="Button (Left)" Margin="2" HorizontalAlignment="Left"/>
+            <Button Content="Button (Center)" Margin="2" HorizontalAlignment="Center"/>
+            <Button Content="Button (Right)" Margin="2" HorizontalAlignment="Right"/>
+            <Button Content="Button (Stretch)" Margin="2" HorizontalAlignment="Stretch" />
+        </StackPanel>
     </StackPanel>
 </Window>
