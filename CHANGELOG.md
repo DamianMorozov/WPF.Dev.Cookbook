@@ -2,9 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.2.43] - 2020-03-03
+## [0.2.44] - 2020-03-03
 ### Updated
   [*] CH03.UniformGridDemo
+  [*] CH03.WrapPanelDemo
 
 ## [0.2.42] - 2020-03-02
 ### Updated
