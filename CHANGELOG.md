@@ -2,9 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.2.46] - 2020-03-05
+## [0.2.47] - 2020-03-05
 ### Updated
   [*] CH03.CanvasDemo
+  [*] CH03.BorderDemo
 
 ## [0.2.45] - 2020-03-03
 ### Updated
