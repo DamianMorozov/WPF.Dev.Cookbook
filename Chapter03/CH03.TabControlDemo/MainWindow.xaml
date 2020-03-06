@@ -5,25 +5,20 @@
     <Grid>
         <TabControl>
             <TabItem Header="Tab 1">
-                <TextBlock Text="You have selected  'Tab 1'"
-                           FontSize="30" Margin="4"/>
+                <TextBlock Text="You have selected 'Tab 1'" FontSize="30" Margin="4" />
             </TabItem>
             <TabItem Header="Tab 2">
-                <TextBlock Text="You have selected  'Tab 2'"
-                           FontSize="30" Margin="4"/>
+                <TextBlock Text="You have selected 'Tab 2'" FontSize="30" Margin="4" />
             </TabItem>
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Ellipse Width="10" Height="10"
-                                 Fill="Green" Margin="0 1 8 0"/>
+                        <Ellipse Width="10" Height="10" Fill="Green" Margin="0 1 8 0" />
                         <TextBlock Text="Tab 3"/>
                     </StackPanel>
                 </TabItem.Header>
-                <Border Background="ForestGreen"
-                        Margin="4">
-                    <TextBlock Text="You have selected  'Tab 3'"
-                               FontSize="30" Foreground="White"/>
+                <Border Background="ForestGreen" Margin="4">
+                    <TextBlock Text="You have selected 'Tab 3'" FontSize="30" Foreground="White" />
                 </Border>
             </TabItem>
         </TabControl>
