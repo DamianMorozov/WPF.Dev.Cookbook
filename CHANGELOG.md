@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.50] - 2020-03-06
+### Updated
+  [*] CH03.ViewBoxDemo
+
 ## [0.2.49] - 2020-03-05
 ### Updated
   [*] CH03.CanvasDemo
