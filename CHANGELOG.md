@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.52] - 2020-03-10
+### Updated
+  [*] CH03.DynamicPanelDemo
+
 ## [0.2.51] - 2020-03-06
 ### Updated
   [*] CH03.ViewBoxDemo
