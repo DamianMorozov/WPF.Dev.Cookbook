@@ -1,8 +1,6 @@
-﻿using System.Data;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Shapes;
 
 namespace CH03.DragAndDropDemo
 {
@@ -26,7 +24,7 @@ namespace CH03.DragAndDropDemo
         
         private void Panel_OnDrop(object sender, DragEventArgs e)
         {
-            if (!(sender is WrapPanel panel1) || e.Data == null || e.Data.GetFormats().Length == 0)
+            if (!(sender is WrapPanel panelDest) || e.Data == null || e.Data.GetFormats().Length == 0)
                 return;
 
             if (e.Data.GetData(e.Data.GetFormats()[0]) is UIElement element)
@@ -35,10 +33,10 @@ namespace CH03.DragAndDropDemo
                 {
                     foreach (var child in UniformGridMain.Children)
                     {
-                        if (child is WrapPanel panel2 && !panel2.Name.Equals(panel1.Name))
+                        if (child is WrapPanel panelSource && !panelSource.Name.Equals(panelDest.Name))
                         {
-                            panel2.Children.Remove(element);
-                            panel1.Children.Add(element);
+                            panelSource.Children.Remove(element);
+                            panelDest.Children.Add(element);
                         }
                     }
                 }

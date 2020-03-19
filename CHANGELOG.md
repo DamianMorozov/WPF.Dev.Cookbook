@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.55] - 2020-03-19
+### Updated
+  [*] CH03.DragAndDropDemo
+
 ## [0.2.54] - 2020-03-12
 ### Updated
   [*] CH04.NotificationPropertiesDemo
