@@ -18,8 +18,7 @@ namespace CH04.AttachedPropertyDemo
         public static readonly DependencyProperty SelectOnFocusProperty =
             DependencyProperty.RegisterAttached("SelectOnFocus", typeof(bool), typeof(TextBoxExtensions), new PropertyMetadata(false, OnSelectOnFocusChanged));
 
-        private static void OnSelectOnFocusChanged(DependencyObject d, 
-                                 DependencyPropertyChangedEventArgs e)
+        private static void OnSelectOnFocusChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (d is TextBox textBox)
             {

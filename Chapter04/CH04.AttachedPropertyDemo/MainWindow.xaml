@@ -3,13 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:extensions="clr-namespace:CH04.AttachedPropertyDemo"
         Title="Attached Property Demo" Height="150" Width="340">
-    <StackPanel Margin="15">
-        <TextBox Text="Normal TextBox Control"
-                 Width="200" Height="30"
-                 Margin="4"/>
-        <TextBox Text="Select On Focus: Enabled"
-                 extensions:TextBoxExtensions.SelectOnFocus="True"
-                 Width="200" Height="30"
-                 Margin="4"/>
+    <StackPanel Margin="10">
+        <TextBox Text="Normal TextBox Control" Width="200" Height="30" Margin="10"
+            extensions:TextBoxExtensions.SelectOnFocus="False"/>
+        <TextBox Text="Select On Focus: Enabled" Width="200" Height="30" Margin="10"
+            extensions:TextBoxExtensions.SelectOnFocus="True" />
     </StackPanel>
 </Window>
