@@ -4,16 +4,11 @@
         Title="Element to Element Data Binding Demo" Height="150" Width="400">
     <Grid>
         <TextBlock FontSize="{Binding Value, ElementName=fontSizeSlider}"
-                   Margin="4"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center">
+            Margin="4" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Run Text="Font Size:"/>
             <Run Text="{Binding Value, ElementName=fontSizeSlider}"/>
         </TextBlock>
-        <Slider x:Name="fontSizeSlider" 
-                Minimum="10" Maximum="40" Value="20"
-                LargeChange="5"
-                VerticalAlignment="Bottom"
-                Margin="10"/>
+        <Slider x:Name="fontSizeSlider" Minimum="10" Maximum="40" Value="20"
+            LargeChange="5" VerticalAlignment="Bottom" Margin="10" />
     </Grid>
 </Window>
