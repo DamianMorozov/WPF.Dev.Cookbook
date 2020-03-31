@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CH04.CollectionBindingDemo
 {
@@ -30,7 +17,6 @@ namespace CH04.CollectionBindingDemo
         public static readonly DependencyProperty EmployeesProperty =
             DependencyProperty.Register("Employees", typeof(ObservableCollection<Employee>), typeof(MainWindow), new PropertyMetadata(null));
 
-
         public MainWindow()
         {
             InitializeComponent();
@@ -39,24 +25,21 @@ namespace CH04.CollectionBindingDemo
             {
                 new Employee
                 {
-                    FirstName = "Kunal", LastName ="Chowdhury",
-                    Department="Software Division"
+                    FirstName = "Kunal", LastName ="Chowdhury", Department="Software Division",
                 },
 
                 new Employee
                 {
-                    FirstName = "Michael", LastName ="Washington",
-                    Department="Software Division"
+                    FirstName = "Michael", LastName ="Washington", Department="Software Division",
                 },
 
                 new Employee
                 {
-                    FirstName = "John", LastName ="Strokes",
-                    Department="Finance Department"
+                    FirstName = "John", LastName ="Strokes", Department="Finance Department",
                 },
             };
 
-            dataGrid.ItemsSource = Employees;
+            //dataGrid.ItemsSource = Employees;
         }
     }
 }
