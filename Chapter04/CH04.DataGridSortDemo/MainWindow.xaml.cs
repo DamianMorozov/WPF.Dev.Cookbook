@@ -1,31 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CH04.DataGridSortDemo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public ObservableCollection<Employee> Employees
         {
-            get { return (ObservableCollection<Employee>)GetValue(EmployeesProperty); }
-            set { SetValue(EmployeesProperty, value); }
+            get => (ObservableCollection<Employee>)GetValue(EmployeesProperty);
+            set => SetValue(EmployeesProperty, value);
         }
 
         public static readonly DependencyProperty EmployeesProperty =
@@ -37,48 +26,76 @@ namespace CH04.DataGridSortDemo
 
             Employees = new ObservableCollection<Employee>
             {
-                new Employee
-                {
-                    ID = "EMP0001",
-                    FirstName = "Kunal", LastName = "Chowdhury",
-                    Department = "Software Division"
-                },
-
-                new Employee
-                {
-                    ID = "EMP0002",
-                    FirstName = "Michael", LastName = "Washington",
-                    Department = "Software Division"
-                },
-
-                new Employee
-                {
-                    ID = "EMP0003",
-                    FirstName = "John", LastName = "Strokes",
-                    Department = "Finance Department"
-                },
-
-                new Employee
-                {
-                    ID = "EMP0004",
-                    FirstName = "Ramesh", LastName = "Shukla",
-                    Department = "Finance Department"
-                }
+                new Employee { ID = "EMP0001", FirstName = "Kunal", LastName = "Chowdhury", Department = "Software Division" },
+                new Employee { ID = "EMP0002", FirstName = "Michael", LastName = "Washington", Department = "Software Division" },
+                new Employee { ID = "EMP0003", FirstName = "John", LastName = "Strokes", Department = "Finance Department" },
+                new Employee { ID = "EMP0004", FirstName = "Ramesh", LastName = "Shukla", Department = "Finance Department" }
             };
-
             dataGrid.ItemsSource = Employees;
         }
 
-        private void OnSortByDepartment(object sender, RoutedEventArgs e)
+        private void OnSortByIdAsc(object sender, RoutedEventArgs e)
         {
-            var cvs = CollectionViewSource.GetDefaultView(dataGrid.ItemsSource);
-            if (cvs != null && cvs.CanSort)
-            {
-                cvs.SortDescriptions.Clear();
+            MakeSort(sender, e, "ID", ListSortDirection.Ascending);
+        }
 
-                if (sortByDepartment.IsChecked == true)
+        private void OnSortByIdDesc(object sender, RoutedEventArgs e)
+        {
+            MakeSort(sender, e, "ID", ListSortDirection.Descending);
+        }
+
+        private void OnSortByFirstNameAsc(object sender, RoutedEventArgs e)
+        {
+            MakeSort(sender, e, "FirstName", ListSortDirection.Ascending);
+        }
+
+        private void OnSortByFirstNameDesc(object sender, RoutedEventArgs e)
+        {
+            MakeSort(sender, e, "FirstName", ListSortDirection.Descending);
+        }
+
+        private void OnSortByLastNameAsc(object sender, RoutedEventArgs e)
+        {
+            MakeSort(sender, e, "LastName", ListSortDirection.Ascending);
+        }
+
+        private void OnSortByLastNameDesc(object sender, RoutedEventArgs e)
+        {
+            MakeSort(sender, e, "LastName", ListSortDirection.Descending);
+        }
+
+        private void OnSortByDepartmentAsc(object sender, RoutedEventArgs e)
+        {
+            MakeSort(sender, e, "Department", ListSortDirection.Ascending);
+        }
+
+        private void OnSortByDepartmentDesc(object sender, RoutedEventArgs e)
+        {
+            MakeSort(sender, e, "Department", ListSortDirection.Descending);
+        }
+
+        private void MakeSort(object sender, RoutedEventArgs e, string propName, ListSortDirection sortDirection)
+        {
+            var source = CollectionViewSource.GetDefaultView(dataGrid.ItemsSource);
+            if (source != null && source.CanSort)
+            {
+                source.SortDescriptions.Clear();
+                if (sender is CheckBox checkBox)
                 {
-                    cvs.SortDescriptions.Add(new SortDescription("Department", ListSortDirection.Ascending));
+                    foreach (var child in gridMain.Children)
+                    {
+                        if (child is CheckBox getChild)
+                        {
+                            if (getChild != checkBox)
+                            {
+                                getChild.IsChecked = false;
+                            }
+                        }
+                    }
+                    if (checkBox.IsChecked == true)
+                    {
+                        source.SortDescriptions.Add(new SortDescription(propName, sortDirection));
+                    }
                 }
             }
         }

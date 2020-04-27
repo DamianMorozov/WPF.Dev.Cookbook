@@ -1,21 +1,49 @@
 ﻿<Window x:Class="CH04.DataGridSortDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Sorting Demo" Height="200" Width="400">
+        Title="Sorting Demo" Height="300" Width="500"
+        Name="WindowMain">
     <StackPanel>
-        <DataGrid x:Name="dataGrid"
-                  AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="EMP ID" Binding="{Binding ID}"/>
-                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
-                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
-                <DataGridTextColumn Header="Department" Binding="{Binding Department}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <CheckBox x:Name="sortByDepartment"
-                  Content="Sort by Department" 
-                  HorizontalAlignment="Right"
-                  Margin="10"
-                  Click="OnSortByDepartment"/>
+        <Grid Name="gridMain">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <CheckBox x:Name="sortByIdAsc" Content="ID asc" HorizontalAlignment="Center" 
+                Click="OnSortByIdAsc" Margin="5" Grid.Row="0" Grid.Column="0" />
+            <CheckBox x:Name="sortByFirstNameAsc" Content="FirstName asc" HorizontalAlignment="Center" 
+                Click="OnSortByFirstNameAsc" Margin="5" Grid.Row="0" Grid.Column="1" />
+            <CheckBox x:Name="sortByLastNameAsc" Content="LastName asc" HorizontalAlignment="Center" 
+                Click="OnSortByLastNameAsc" Margin="5" Grid.Row="0" Grid.Column="2" />
+            <CheckBox x:Name="sortByDepartmentAsc" Content="Department asc" HorizontalAlignment="Center" 
+                Click="OnSortByDepartmentAsc" Margin="5" Grid.Row="0" Grid.Column="3" />
+            
+            <CheckBox x:Name="sortByIdDesc" Content="ID desc" HorizontalAlignment="Center" 
+                Click="OnSortByIdDesc" Margin="5" Grid.Row="1" Grid.Column="0" />
+            <CheckBox x:Name="sortByFirstNameDesc" Content="FirstName desc" HorizontalAlignment="Center" 
+                Click="OnSortByFirstNameDesc" Margin="5" Grid.Row="1" Grid.Column="1" />
+            <CheckBox x:Name="sortByLastNameDesc" Content="LastName desc" HorizontalAlignment="Center" 
+                Click="OnSortByLastNameDesc" Margin="5" Grid.Row="1" Grid.Column="2" />
+            <CheckBox x:Name="sortByDepartmentDesc" Content="Department desc" HorizontalAlignment="Center" 
+                Click="OnSortByDepartmentDesc" Margin="5" Grid.Row="1" Grid.Column="3" />
+            
+            <DataGrid x:Name="dataGrid" AutoGenerateColumns="False"
+                Grid.Row="2" Grid.ColumnSpan="4" Grid.Column="0"
+                ItemsSource="{Binding Employees, ElementName=WindowMain}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="EMP ID" Binding="{Binding ID}"/>
+                    <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                    <DataGridTextColumn Header="Department" Binding="{Binding Department}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </StackPanel>
 </Window>
