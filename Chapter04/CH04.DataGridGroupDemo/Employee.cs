@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CH04.DataGridGroupDemo
+﻿namespace CH04.DataGridGroupDemo
 {
     public class Employee
     {

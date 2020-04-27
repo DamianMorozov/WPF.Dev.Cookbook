@@ -2,9 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.2.61] - 2020-04-27
+## [0.2.62] - 2020-04-27
 ### Updated
   [*] CH04.DataGridSortDemo
+  [*] CH04.DataGridGroupDemo
 
 ## [0.2.60] - 2020-03-31
 ### Updated

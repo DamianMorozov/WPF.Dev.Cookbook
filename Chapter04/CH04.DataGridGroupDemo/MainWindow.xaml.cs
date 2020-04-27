@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CH04.DataGridGroupDemo
 {
@@ -24,8 +12,8 @@ namespace CH04.DataGridGroupDemo
     {
         public ObservableCollection<Employee> Employees
         {
-            get { return (ObservableCollection<Employee>)GetValue(EmployeesProperty); }
-            set { SetValue(EmployeesProperty, value); }
+            get => (ObservableCollection<Employee>)GetValue(EmployeesProperty);
+            set => SetValue(EmployeesProperty, value);
         }
 
         public static readonly DependencyProperty EmployeesProperty =
@@ -37,46 +25,31 @@ namespace CH04.DataGridGroupDemo
 
             Employees = new ObservableCollection<Employee>
             {
-                new Employee
-                {
-                    ID = "EMP0001",
-                    FirstName = "Kunal", LastName = "Chowdhury",
-                    Department = "Software Division"
-                },
-
-                new Employee
-                {
-                    ID = "EMP0002",
-                    FirstName = "Michael", LastName = "Washington",
-                    Department = "Software Division"
-                },
-
-                new Employee
-                {
-                    ID = "EMP0003",
-                    FirstName = "John", LastName = "Strokes",
-                    Department = "Finance Department"
-                },
-
-                new Employee
-                {
-                    ID = "EMP0004",
-                    FirstName = "Ramesh", LastName = "Shukla",
-                    Department = "Finance Department"
-                }
+                new Employee { ID = "EMP0001", FirstName = "Kunal", LastName = "Chowdhury", Department = "Software Division" },
+                new Employee { ID = "EMP0002", FirstName = "Michael", LastName = "Washington", Department = "Software Division" },
+                new Employee { ID = "EMP0003", FirstName = "John", LastName = "Strokes", Department = "Finance Department" },
+                new Employee { ID = "EMP0004", FirstName = "Ramesh", LastName = "Shukla", Department = "Finance Department" }
             };
+            //dataGrid.ItemsSource = Employees;
         }
 
         private void OnGroupByDepartment(object sender, RoutedEventArgs e)
         {
-            var cvs = CollectionViewSource.GetDefaultView(dataGrid.ItemsSource);
-            if (cvs != null && cvs.CanGroup)
+            OnGroup(sender, e, "Department");
+        }
+        
+        private void OnGroup(object sender, RoutedEventArgs e, string propName)
+        {
+            var source = CollectionViewSource.GetDefaultView(dataGrid.ItemsSource);
+            if (source != null && source.CanGroup)
             {
-                cvs.GroupDescriptions.Clear();
-
-                if (groupByDepartment.IsChecked == true)
+                source.GroupDescriptions.Clear();
+                if (sender is CheckBox checkBox)
                 {
-                    cvs.GroupDescriptions.Add(new PropertyGroupDescription("Department"));
+                    if (checkBox.IsChecked == true)
+                    {
+                        source.GroupDescriptions.Add(new PropertyGroupDescription(propName));
+                    }
                 }
             }
         }
