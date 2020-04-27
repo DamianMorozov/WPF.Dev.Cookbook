@@ -12,10 +12,11 @@
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
             </Grid.RowDefinitions>
+
             <CheckBox x:Name="sortByIdAsc" Content="ID asc" HorizontalAlignment="Center" 
                 Click="OnSortByIdAsc" Margin="5" Grid.Row="0" Grid.Column="0" />
             <CheckBox x:Name="sortByFirstNameAsc" Content="FirstName asc" HorizontalAlignment="Center" 
