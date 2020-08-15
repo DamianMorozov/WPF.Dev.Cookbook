@@ -4,6 +4,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [0.2.64] - 2020-08-15
 ### Updated
+  [*] CH01.CommandLineArgumentDemo
   [*] CH04.StaticBindingDemo
 
 ## [0.2.63] - 2020-04-27

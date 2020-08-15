@@ -12,9 +12,14 @@ namespace CH01.CommandLineArgumentDemo
         {
             base.OnStartup(e);
 
-            var args = e.Args;
-            if (args.Contains("/other")) { new OtherWindow().Show(); }
-            else { new MainWindow().Show(); }
+            if (e.Args.Contains("/other") || e.Args.Contains("-other"))
+            {
+                new OtherWindow().Show();
+            }
+            else
+            {
+                new MainWindow().Show();
+            }
         }
     }
 }
