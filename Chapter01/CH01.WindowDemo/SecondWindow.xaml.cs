@@ -1,6 +1,4 @@
-﻿using System.Windows;
-
-namespace CH01.WindowDemo
+﻿namespace CH01.WindowDemo
 {
     /// <summary>
     /// Interaction logic for SecondWindow.xaml

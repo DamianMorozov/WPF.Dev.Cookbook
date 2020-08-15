@@ -2,7 +2,7 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.2.71] - 2020-08-15
+## [0.2.72] - 2020-08-15
 ### Updated
   [*] CH01.CommandLineArgumentDemo
   [*] CH01.DialogBoxDemo
@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   [*] CH01.PageDemo
   [*] CH01.SingleInstanceDemo
   [*] CH01.UnhandledExceptionDemo
+  [*] CH01.WindowDemo
   [*] CH04.StaticBindingDemo
 
 ## [0.2.63] - 2020-04-27
