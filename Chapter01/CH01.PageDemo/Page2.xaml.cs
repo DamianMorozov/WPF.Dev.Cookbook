@@ -1,6 +1,4 @@
-﻿using System.Windows;
-
-namespace CH01.PageDemo
+﻿namespace CH01.PageDemo
 {
     /// <summary>
     /// Interaction logic for Page2.xaml
@@ -10,14 +8,6 @@ namespace CH01.PageDemo
         public Page2()
         {
             InitializeComponent();
-        }
-
-        private void ButtonPrevious_OnClick(object sender, RoutedEventArgs e)
-        {
-            if (NavigationService != null && NavigationService.CanGoBack)
-            {
-                NavigationService.GoBack();
-            }
         }
     }
 }

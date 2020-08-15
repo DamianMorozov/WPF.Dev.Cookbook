@@ -1,7 +1,23 @@
-﻿<NavigationWindow x:Class="CH01.PageDemo.MainWindow"
+﻿<Window x:Class="CH01.PageDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525"
-        Source="Page1.xaml">
+        Title="MainWindow" Height="400" Width="400"
+        WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-</NavigationWindow>
+        <Button Name="ButtonBack" Grid.Row="0" Grid.Column="0" Content="Back" Margin="5" Click="ButtonBack_OnClick"/>
+        <Button Name="ButtonNext" Grid.Row="0" Grid.Column="1" Content="Next" Margin="5" Click="ButtonNext_OnClick"/>
+
+        <Frame x:Name="FrameMain" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" NavigationUIVisibility="Visible" />
+    </Grid>
+</Window>
+
+<!-->Source="Page1.xaml"-->
